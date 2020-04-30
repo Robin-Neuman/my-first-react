@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import TodoList from './TodoList';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -126,11 +126,14 @@ class Game extends React.Component {
                     <Board 
                         squares={current.squares}
                         onClick={(i) => this.handleClick(i)}
-                    />
+                    />                    
                 </div>
                 <div className="game-info">
                     <div>{status}</div>
                     <ol>{moves}</ol>
+                </div>
+                <div id="todo">
+                    <TodoList />
                 </div>
             </div>
         );
